@@ -43,6 +43,7 @@ brew-visit() {
 autoload -Uz compinit
 compinit
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh	
 source <(fzf --zsh)
 [ -f ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
 [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
