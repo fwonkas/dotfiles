@@ -1,6 +1,7 @@
 cask_args appdir: "/Applications", require_sha: true
 
 brew "bat"
+brew "boxes"
 brew "editorconfig"
 brew "fzf"
 brew "gh"
@@ -18,6 +19,7 @@ brew "pngpaste"
 brew "pwgen"
 brew "slacknimate"
 brew "starship"
+brew "thefuck"
 brew "tldr"
 brew "tmux"
 brew "vim"
