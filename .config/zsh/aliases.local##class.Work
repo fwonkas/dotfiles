@@ -1,4 +1,8 @@
 # shellcheck disable=SC2148
+
+# alias web='yarn dlx @web/cli' # This way doesn't work. Because life is hard.
+alias web='npx @web/cli@latest'
+
 # VPN aliases
 CISCO_VPN_CLI="/opt/cisco/anyconnect/bin/vpn"
 TGT_VPN="TGT_VPN_MAC"
