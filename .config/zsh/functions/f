@@ -1,0 +1,5 @@
+f() { # DESC: Opens the Finder to specified directory. (Default is current oath) # ARGS: $1 (optional): Path to open in finder
+	# REQS:  MacOS
+	# USAGE: f [path]
+	open -a "Finder" "${1:-.}"
+}

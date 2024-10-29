@@ -1,0 +1,17 @@
+brew-visit() {
+	# DESC:  Open a Homebrew formula's web page
+	# ARGS:  $1: Homebrew formula name
+	# REQS:  MacOS
+	# USAGE: brew-visit [url]
+	INFO=$(brew info "${1}")
+	INFO_CODE=$?
+	[ $INFO_CODE -ne 0 ] && return 1
+
+	URL=$(echo $INFO | grep ^http | head -1)
+	if [ -z $URL ]; then
+		echo "There doesn't appear to be a URL in the info about ${1}."
+		return 1
+	fi
+
+	open "$URL"
+}

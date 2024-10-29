@@ -1,0 +1,2 @@
+# See https://github.com/dduan/tre/blob/main/README.md
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }

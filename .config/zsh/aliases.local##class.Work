@@ -1,0 +1,9 @@
+# shellcheck disable=SC2148
+# VPN aliases
+CISCO_VPN_CLI="/opt/cisco/anyconnect/bin/vpn"
+TGT_VPN="TGT_VPN_MAC"
+[ -x $CISCO_VPN_CLI ] && alias vpn-connect="\$CISCO_VPN_CLI connect \$TGT_VPN"
+[ -x $CISCO_VPN_CLI ] && alias vpn-disconnect="\$CISCO_VPN_CLI disconnect"
+
+# Will delete this soon in favor of something better
+[ -x "${HOME}/bin/auto-vpn.sh" ] && alias vpn="\${HOME}/bin/auto-vpn.sh"

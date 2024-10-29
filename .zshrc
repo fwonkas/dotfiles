@@ -26,7 +26,8 @@ alias bs="brew search"
 
 # YADM aliases
 alias y="yadm"
-alias ys="yadm status"
+alias ys="y status"
+alias ysu="ys -u"
 
 # These depend on some installed packages, so just to be safe
 [[ "$(command -v bat)" ]] && alias cat="bat"
@@ -38,7 +39,7 @@ export CLICOLOR=1
 # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 
 # Load functions
-fpath=("$HOME/.functions" "${fpath[@]}")
+fpath+=( "$HOME/.config/zsh/functions" )
 autoload -Uz ql f brew-visit tre compinit && compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh && source <(fzf --zsh)

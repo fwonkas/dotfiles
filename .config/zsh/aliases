@@ -1,0 +1,53 @@
+# aliases
+alias more=less
+alias mroe=less
+alias tk=take
+alias top10="print -l -- \${(o)history%% *} | uniq -c | sort -nr | head -n 10"
+alias zsh-plugins="ls \$ZPLUGINDIR"
+
+# git aliases
+alias g=git
+alias gi=git
+alias gg='git grep'
+alias gs='git status'
+alias gd='git diff'
+
+# YADM aliases
+alias y="yadm"
+alias ys="y status"
+alias ysu="ys -u"
+alias yg='y grep'
+alias yd='y diff'
+
+# Homebrew aliases
+alias b="brew"
+alias bi="b info"
+alias bin="b install"
+alias bs="b search"
+alias bv="brew-visit" # points to the function below because I'm complicated
+
+# These depend on some installed packages, so just to be safe
+alias ls="ls -F"
+[[ "$(command -v lsd)" ]] && alias ls="lsd -F"
+[[ "$(command -v bat)" ]] && alias cat="bat"
+[[ "$(command -v htop)" ]] && alias top="htop"
+[[ "$(command -v duf)" ]] && alias df="duf"
+
+# Toggle hidden files in Finder
+alias showhidden='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
+alias hidehidden='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
+
+# For passing github token to gh
+alias gh="op plugin run -- gh"
+
+system_type=$(uname -s)
+if [ "$system_type" = "Darwin" ]; then
+	# Open iTerm from VS Code terminal
+	# May refactor this to make the alias available in all non-iTerm terminals
+	[ ! -v "$IN_VS_CODE_TERMINAL" ] && alias iterm="open -a iTerm"
+
+fi
+
+if [ -e ./aliases.local ]; then
+	source ./aliases.local
+fi

@@ -1,0 +1,7 @@
+ql() {
+	# DESC:  Opens files in MacOS Quicklook
+	# ARGS:  $1 (optional): File to open in Quicklook
+	# REQS:  MacOS
+	# USAGE: ql [file1] [file2]
+	qlmanage -p "${*}" &>/dev/null
+}

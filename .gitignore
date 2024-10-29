@@ -1,7 +1,11 @@
 *.sock
 *.swp
+__pycache__/
 .1password
 .anyconnect
+.arduinoIDE/localization-cache
+.arduinoIDE/recent-sketches.json
+.arduinoIDE/recentworkspace.json
 .awesomecache
 .bash_history
 .cache
@@ -9,7 +13,10 @@
 .cisco
 .colima
 .config/gtk-2.0/
+.config/nvim
+.config/zed/**/*.mdb
 .config/zsh/plugins
+.cups
 .docker/
 .DS_Store
 .gitignore_global
@@ -17,11 +24,13 @@
 .gnupg
 .gnupg_*
 .lesshst
-.local/bin/
+.local/bin
 .local/share
+.local/state
 .node_repl_history
 .npm
 .nvm
+.openstack_history
 .rest-client
 .sonarlint
 .ssh
@@ -29,6 +38,7 @@
 .Trash
 .vault-token
 .viminfo
+.vimrc_back
 .vscode
 .wget-hsts
 .yarn
@@ -38,6 +48,7 @@
 .zsh_history
 .zsh_sessions
 awesomecache
+Applications
 Desktop
 Development
 Documents
@@ -53,3 +64,6 @@ Public
 src
 tmp
 yarn.lock
+
+# May add this back (much) later
+.SpaceVim
