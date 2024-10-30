@@ -50,11 +50,6 @@ for file in "${FILES_TO_SOURCE[@]}"; do
 	fi
 done
 
-# environment variables
-export PATH="$PATH:${HOME}/.local/bin"
-export CLICOLOR=1
-# export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
-
 # Load functions
 fpath+=("$HOME/.config/zsh/functions")
 
@@ -77,12 +72,9 @@ prompt pure
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh && source <(fzf --zsh)
 
 if [ "$system_type" = "Darwin" ]; then
-	[ -f ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
-	[ -e "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+	[ -f $HOME/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
+	[ -e $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
 	[ -f /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh ] && source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
-	# [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	# [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-	# [ -f /opt/homebrew/share/liquidprompt ] && source /opt/homebrew/share/liquidprompt
 fi
 
 $HOME/.iterm2/it2check
