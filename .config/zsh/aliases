@@ -57,7 +57,6 @@ if [ "$system_type" = "Darwin" ]; then
 	# Open iTerm from VS Code terminal
 	# May refactor this to make the alias available in all non-iTerm terminals
 	[ ! -v "$IN_VS_CODE_TERMINAL" ] && alias iterm="open -a iTerm"
-
 fi
 
 if [ -e ./aliases.local ]; then

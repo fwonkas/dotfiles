@@ -10,6 +10,8 @@ export ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
 export ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR}/plugins}
 export NVM_DIR=$HOME/.nvm
 
+[[ "$(command -v bat)" ]] && export PAGER="bat -p"
+
 {% if yadm.os == "Darwin" %}
 export CLICOLOR=1
 export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=1
