@@ -23,6 +23,7 @@ __pycache__/
 .CFUserTextEncoding
 .cisco
 .colima
+.config/filezilla/
 .config/gtk-2.0/
 .config/nvim
 .config/zed/**/*.mdb
