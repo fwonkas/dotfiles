@@ -3,6 +3,7 @@
 .config/zsh/environment
 .gitconfig.local
 .npmrc
+.zprofile.local
 
 # Various stuff
 *.sock
