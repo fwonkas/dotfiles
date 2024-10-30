@@ -20,3 +20,5 @@ ref = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refn
 
 [include]
 path = .gitconfig.local
+[push]
+	autoSetupRemote = true
