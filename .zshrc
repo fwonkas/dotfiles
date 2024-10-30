@@ -36,7 +36,7 @@ fpath+=($HOME/.config/zsh/functions)
 FILES_TO_SOURCE=(
 	$HOME/.config/zsh/aliases
 	$HOME/.config/zsh/environment
-	$HOME/.zsh-unplugged # extremely minimal "package manager"
+	$HOME/.config/zsh/zsh-unplugged # extremely minimal "package manager"
 	$HOME/.iterm2_shell_integration.zsh
 	$HOMEBREW_PREFIX/opt/nvm/nvm.sh
 	$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
