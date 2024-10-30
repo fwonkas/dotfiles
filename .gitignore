@@ -2,6 +2,7 @@
 .config/homebrew/.Brewfile
 .config/zsh/aliases.local
 .config/zsh/environment
+.config/target-certs/
 .gitconfig.local
 .npmrc
 .zprofile.local

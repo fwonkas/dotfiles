@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Updating the yadm repo origin URL"
-yadm remote set-url origin "git@github.com:MyUser/dotfiles.git"
+echo "Setting the yadm repo origin URL to SSH..."
+yadm remote set-url origin "git@github.com:fwonkas/dotfiles.git"
