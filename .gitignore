@@ -6,6 +6,7 @@
 .zprofile.local
 
 # Various stuff
+.DS_Store
 *.sock
 *.swp
 __pycache__/
@@ -26,8 +27,6 @@ __pycache__/
 .config/zsh/plugins
 .cups
 .docker/
-.DS_Store
-.gitignore_global
 .gk/repoMapping.json
 .gnupg
 .gnupg_*

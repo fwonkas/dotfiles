@@ -1,22 +1,22 @@
 [user]
-	name = Joe Lillibridge
+name = Joe Lillibridge
 
 [gpg]
-	format = ssh
+format = ssh
 
 [gpg "ssh"]
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [commit]
-	gpgsign = true
+gpgsign = true
 
 [alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	st = status
-	tst = status
-	co = checkout
-	tco = checkout
-	ref = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+st = status
+tst = status
+co = checkout
+tco = checkout
+ref = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
 [include]
-    path = .gitconfig.local
+path = .gitconfig.local
