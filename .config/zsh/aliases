@@ -17,6 +17,7 @@ alias gd='g diff'
 alias ga='g add'
 alias gap='ga -p'
 alias gc='g commit'
+alias gp='g push'
 
 # YADM aliases
 alias y="yadm"
@@ -27,6 +28,7 @@ alias yd='y diff'
 alias ya='y add'
 alias yap='ya -p'
 alias yc='y commit'
+alias yp='y push'
 
 # Homebrew aliases
 alias b="brew"
