@@ -59,6 +59,9 @@ if [ "$system_type" = "Darwin" ]; then
 	[ ! -v "$IN_VS_CODE_TERMINAL" ] && alias iterm="open -a iTerm"
 fi
 
-if [ -e ./aliases.local ]; then
-	source ./aliases.local
+if [ -e "${0:a:h}"/aliases.local ]; then
+	source "${0:a:h}"/aliases.local
+else
+	echo "$(pwd): Couldn't find aliases.local!"
+	echo "Maybe: ${0:a:h}/aliases.local"
 fi
