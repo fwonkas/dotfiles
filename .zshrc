@@ -89,4 +89,4 @@ if [ $TERMINAL_IS_ITERM2 -eq 0 ]; then
 fi
 
 eval "$(zoxide init --cmd j zsh)"
-eval $(thefuck --alias)
+[[ "$(command -v thefuck)" ]] && eval $(thefuck --alias)
