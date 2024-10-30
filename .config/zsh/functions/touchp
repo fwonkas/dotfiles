@@ -1,0 +1,5 @@
+# shellcheck disable=SC2148
+# Create an empty file and any necessary directories
+touchp() {
+    mkdir -p "$(dirname "$1")" && touch "$1"
+}

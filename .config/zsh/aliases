@@ -1,16 +1,22 @@
+system_type=$(uname -s)
+
 # aliases
 alias more=less
-alias mroe=less
+alias mroe=more
 alias tk=take
 alias top10="print -l -- \${(o)history%% *} | uniq -c | sort -nr | head -n 10"
 alias zsh-plugins="ls \$ZPLUGINDIR"
+alias vi=nvim
 
 # git aliases
 alias g=git
-alias gi=git
-alias gg='git grep'
-alias gs='git status'
-alias gd='git diff'
+alias gi=g
+alias gg='g grep'
+alias gs='g status'
+alias gd='g diff'
+alias ga='g add'
+alias gap='ga -p'
+alias gc='g commit'
 
 # YADM aliases
 alias y="yadm"
@@ -18,13 +24,18 @@ alias ys="y status"
 alias ysu="ys -u"
 alias yg='y grep'
 alias yd='y diff'
+alias ya='y add'
+alias yap='ya -p'
+alias yc='y commit'
 
 # Homebrew aliases
 alias b="brew"
 alias bi="b info"
 alias bin="b install"
+alias bu="b uninstall"
+alias brm="bu"
 alias bs="b search"
-alias bv="brew-visit" # points to the function below because I'm complicated
+alias bv="brew-visit" # a function defined elsewhere
 
 # These depend on some installed packages, so just to be safe
 alias ls="ls -F"
@@ -40,7 +51,6 @@ alias hidehidden='defaults write com.apple.finder AppleShowAllFiles FALSE; killa
 # For passing github token to gh
 alias gh="op plugin run -- gh"
 
-system_type=$(uname -s)
 if [ "$system_type" = "Darwin" ]; then
 	# Open iTerm from VS Code terminal
 	# May refactor this to make the alias available in all non-iTerm terminals

@@ -1,0 +1,7 @@
+# shellcheck disable=SC2148
+show-fpath() {
+    # shellcheck disable=SC2154
+    for i in "${fpath[@]}"; do
+        echo "$i"
+    done
+}

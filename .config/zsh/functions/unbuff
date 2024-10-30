@@ -1,0 +1,6 @@
+# Preserve color when handed around via STD IO
+# example usage:
+# $ unbuff ls --color=auto -F | tee output.txt
+unbuff() {
+    script -q >(cat) $* >/dev/null
+}
