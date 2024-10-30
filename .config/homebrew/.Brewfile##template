@@ -42,6 +42,8 @@ brew "peco"
 brew "pngpaste"
 brew "pwgen"
 brew "shellcheck"
+brew "slackcat"
+brew "slackdump"
 brew "tag"
 brew "thefuck"
 brew "tldr"
@@ -76,10 +78,9 @@ cask "font-cascadia-code"
 cask "font-fira-code-nerd-font"
 cask "font-sauce-code-pro-nerd-font"
 cask "google-chrome"
-cask "gpg-suite"
+cask "gpg-suite-no-mail"
 cask "iterm2"
 cask "obsidian"
-cask "suspicious-package"
 
 {% if yadm.class == "Home" %}
 # Casks (Home)
@@ -105,6 +106,7 @@ mas "The Unarchiver", id: 425424353
 
 {% if yadm.class == "Home" %}
 # MAS (Home)
+mas "Apple Configurator", id: 1037126344
 mas "Folder Tidy", id: 486626129
 mas "Messenger", id: 1480068668
 mas "PCalc", id: 403504866
