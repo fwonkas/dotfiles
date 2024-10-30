@@ -33,10 +33,13 @@ setopt $OPTIONS[@]
 
 fpath+=($HOME/.config/zsh/functions)
 
+CONFIG_DIR=$HOME/.config
+ZSH_CONFIG_DIR=$CONFIG_DIR/zsh
+
 FILES_TO_SOURCE=(
-	$HOME/.config/zsh/aliases
-	$HOME/.config/zsh/environment
-	$HOME/.config/zsh/zsh-unplugged # extremely minimal "package manager"
+	$ZSH_CONFIG_DIR/aliases
+	$ZSH_CONFIG_DIR/environment
+	$ZSH_CONFIG_DIR/zsh-unplugged # extremely minimal "package manager"
 	$HOME/.iterm2_shell_integration.zsh
 	$HOMEBREW_PREFIX/opt/nvm/nvm.sh
 	$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
@@ -51,7 +54,7 @@ for file in "${FILES_TO_SOURCE[@]}"; do
 done
 
 # Load functions
-fpath+=("$HOME/.config/zsh/functions")
+fpath+=("$ZSH_CONFIG_DIR/functions")
 
 FUNCS_TO_AUTOLOAD=(
 	brew-visit
