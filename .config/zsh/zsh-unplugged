@@ -1,0 +1,41 @@
+# shellcheck disable=SC2148
+# where do you want to store your plugins?
+ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
+
+if [[ ! -d $ZPLUGINDIR ]]; then
+	# make sure the directory exists
+	mkdir -p "$ZPLUGINDIR"
+fi
+
+ZSH_UNPLUGGED="${ZPLUGINDIR}/zsh_unplugged/"
+
+# get zsh_unplugged and store it with your other plugins
+if [[ ! -d $ZSH_UNPLUGGED ]]; then
+	git clone --quiet https://github.com/mattmc3/zsh_unplugged "$ZSH_UNPLUGGED"
+fi
+# shellcheck disable=SC1091
+source "$ZPLUGINDIR"/zsh_unplugged/zsh_unplugged.zsh
+
+# make list of the Zsh plugins you use
+repos=(
+	# plugins that you want loaded first
+	romkatv/zsh-defer
+
+	hyperupcall/autoenv
+
+	# plugins you want loaded last
+	zsh-users/zsh-syntax-highlighting
+	zsh-users/zsh-history-substring-search
+	zsh-users/zsh-autosuggestions
+	zsh-users/zsh-completions
+	# zsh-alias-finder and zsh-you-should-use do basically the same thing
+	# akash329d/zsh-alias-finder
+	MichaelAquilina/zsh-you-should-use
+	fdellwing/zsh-bat
+	zdharma-continuum/fast-syntax-highlighting
+	unixorn/tumult.plugin.zsh
+	supercrabtree/k
+)
+
+# now load your plugins
+plugin-load "${repos[@]}"
