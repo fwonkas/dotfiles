@@ -22,3 +22,16 @@ find -L "$BOOTSTRAP_D" -type f | sort | while IFS= read -r bootstrap; do
         fi
     fi
 done
+
+hash -r
+YARN=$(brew --prefix yarn)/bin/yarn
+
+if (command -v "$YARN" >/dev/null 2>&1); then
+    # Install yalc. Needed for local-publish
+    echo "Installing yalc..."
+    if ! $YARN global add yalc; then
+        echo "Failed to install yalc" >&2
+    else
+        echo "Successfully installed yalc"
+    fi
+fi
