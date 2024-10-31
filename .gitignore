@@ -23,8 +23,9 @@ __pycache__/
 .CFUserTextEncoding
 .cisco
 .colima
-.config/filezilla/
-.config/gtk-2.0/
+.config/filezilla
+.config/gtk-2.0
+.config/jgit
 .config/nvim
 .config/zed/**/*.mdb
 .config/zsh/plugins
@@ -51,6 +52,7 @@ __pycache__/
 .vimrc_back
 .vscode
 .wget-hsts
+.yalc
 .yarn
 .yarnrc
 .zcompcache
