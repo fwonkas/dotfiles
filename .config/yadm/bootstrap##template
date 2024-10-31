@@ -18,7 +18,7 @@ if [[ ! -d "$BOOTSTRAP_D" ]]; then
 fi
 
 # This will execute all executable files (excluding templates and editor
-# backups) in the {{ env.BOOTSTRAP_D }} directory when run.
+# backups) in the $BOOTSTRAP_D directory when run.
 
 find -L "$BOOTSTRAP_D" -type f | sort | while IFS= read -r bootstrap; do
     if [[ -x "$bootstrap" && ! "$bootstrap" =~ "##" && ! "$bootstrap" =~ "~$" ]]; then
