@@ -3,6 +3,8 @@
 .config/zsh/aliases.local
 .config/zsh/environment
 .config/target-certs/
+.config/yadm/bootstrap
+.config/yadm/bootstrap.d/install-target-certs.sh
 .gitconfig.local
 .npmrc
 .zprofile.local
