@@ -2,6 +2,7 @@
 system_type=$(uname -s)
 
 # aliases
+alias less="bat -p"
 alias more=less
 alias mroe=more
 alias tk=take
