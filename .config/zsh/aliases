@@ -61,8 +61,9 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 if [ -e "${0:a:h}"/aliases.local ]; then
+	# omg shut up shellcheck
+	# shellcheck source=/dev/null
 	source "${0:a:h}"/aliases.local
 else
-	echo "$(pwd): Couldn't find aliases.local!"
-	echo "Maybe: ${0:a:h}/aliases.local"
+	echo "Couldn't find ${0:a:h}/aliases.local!"
 fi
