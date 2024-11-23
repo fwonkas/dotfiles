@@ -17,8 +17,29 @@ tst = status
 co = checkout
 tco = checkout
 ref = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+amend = commit --amend
+untrack = rm --cached
+unadd = restore --staged
+softadd = add --intent-to-add
+
+# init new git repo with empty initial commit
+start = !git init && git commit --allow-empty -m \"Initial commit\"
+
+# create a git repo including everything in this dir
+initthis = !git init && git add . && git commit -m \"Bootstrap commit\"
+
+slog = log --pretty=format:'%C(auto)%h %C(red)%as %C(blue)%aN%C(auto)%d%C(green) %s'
+l = slog
+# Logs commits matching current author
+lome = "!git slog --author=$(git config --get user.name)"
+# Switch to master/main/trunk; whatever the default branch is in the repo
+swm = !git switch $(basename $(git symbolic-ref --short refs/remotes/origin/HEAD))
+
+remoteurl = "remote get-url origin"
+remotehttps = "!git remoteurl | sed  -e 's/git@/https:\\/\\//'"
+remotecopy = "!git remotehttps | pbcopy"
 
 [include]
 path = .gitconfig.local
 [push]
-	autoSetupRemote = true
+autoSetupRemote = true

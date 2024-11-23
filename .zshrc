@@ -6,6 +6,7 @@ OPTIONS=(
 	append_history
 	share_history
 	histignorealldups
+	INC_APPEND_HISTORY
 
 	## Gonna slowly turn these on and see what I like
 
