@@ -21,6 +21,28 @@ amend = commit --amend
 untrack = rm --cached
 unadd = restore --staged
 softadd = add --intent-to-add
+wdiff = diff -w --word-diff=color --ignore-space-at-eol
+
+# Diff of last commit
+dlc = diff --cached HEAD^
+
+# list all defined aliases
+aliases = config --get-regexp alias
+
+# Find very first commit
+first = rev-list --max-parents=0 HEAD
+
+# what would be merged
+incoming = log HEAD..@{upstream}
+
+# what would be pushed
+outgoing = log @{upstream}..HEAD
+outgoing = log @{u}..
+
+# List all commits (on this branch) made by me
+mycommits = log --author=\".*[Jj]an\\s*[Kk]rag.*\"
+
+structure = log --oneline --simplify-by-decoration --graph --all
 
 # init new git repo with empty initial commit
 start = !git init && git commit --allow-empty -m \"Initial commit\"

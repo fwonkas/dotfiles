@@ -37,14 +37,20 @@ fpath+=($HOME/.config/zsh/functions)
 CONFIG_DIR=$HOME/.config
 ZSH_CONFIG_DIR=$CONFIG_DIR/zsh
 
-FILES_TO_SOURCE=(
+FILES_TO_SOURCE=()
+FILES_TO_SOURCE+=(
 	$ZSH_CONFIG_DIR/aliases
 	$ZSH_CONFIG_DIR/environment
 	$ZSH_CONFIG_DIR/zsh-unplugged # extremely minimal "package manager"
 	$HOME/.iterm2_shell_integration.zsh
-	$HOMEBREW_PREFIX/opt/nvm/nvm.sh
-	$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
 )
+
+if [ "$system_type" = "Darwin" ]; then
+	FILES_TO_SOURCE+=(
+		$HOMEBREW_PREFIX/opt/nvm/nvm.sh
+		$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm
+	)
+fi
 
 for file in "${FILES_TO_SOURCE[@]}"; do
 	if [ -s $file ]; then
@@ -57,8 +63,8 @@ done
 # Load functions
 fpath+=("$ZSH_CONFIG_DIR/functions")
 
-FUNCS_TO_AUTOLOAD=(
-	brew-visit
+FUNCS_TO_AUTOLOAD=()
+FUNCS_TO_AUTOLOAD+=(
 	f
 	fshow
 	ql
@@ -70,6 +76,13 @@ FUNCS_TO_AUTOLOAD=(
 	promptinit
 	compinit
 )
+
+if [ "$system_type" = "Darwin" ]; then
+	FUNCS_TO_AUTOLOAD+=(
+		brew-visit
+	)
+fi
+
 autoload -Uz $FUNCS_TO_AUTOLOAD && compinit && promptinit
 prompt pure
 
