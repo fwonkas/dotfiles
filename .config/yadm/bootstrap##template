@@ -7,13 +7,13 @@ set -eu
 {% if yadm.os == "Darwin" %}
 # install homebrew if it's missing
 if ! command -v brew >/dev/null 2>&1; then
-echo "Installing homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Installing homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if [ -f "$HOME/.Brewfile" ]; then
-echo "Updating homebrew bundle"
-brew bundle --global
+    echo "Updating homebrew bundle"
+    brew bundle --global
 fi
 {% endif %}
 
@@ -86,6 +86,10 @@ find -L "$BOOTSTRAP_D" -type f | sort | while IFS= read -r bootstrap; do
 done
 
 hash -r
+
+{% if yadm.os == "Linux" %}
+npm install --global pure-prompt
+{% endif %}
 
 {% if yadm.class == "Work" %}
 YARN=$(brew --prefix yarn)/bin/yarn

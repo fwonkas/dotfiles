@@ -67,7 +67,6 @@ FUNCS_TO_AUTOLOAD=()
 FUNCS_TO_AUTOLOAD+=(
 	f
 	fshow
-	ql
 	show-fpath
 	take
 	tre
@@ -80,6 +79,7 @@ FUNCS_TO_AUTOLOAD+=(
 if [ "$system_type" = "Darwin" ]; then
 	FUNCS_TO_AUTOLOAD+=(
 		brew-visit
+		ql
 	)
 fi
 
