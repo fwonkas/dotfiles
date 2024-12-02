@@ -1,4 +1,7 @@
 [user]
-	email = joseph.lillibridge@target.com
-	# signingkey = 0C8E0B58274250F2
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJHsJHCNNsHnVmDwoZB0OpGoXJ7oyY0cwN4w5CvWCxqB
+email = joseph.lillibridge@target.com
+# signingkey = 0C8E0B58274250F2
+signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJHsJHCNNsHnVmDwoZB0OpGoXJ7oyY0cwN4w5CvWCxqB
+
+[gpg "ssh"]
+program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

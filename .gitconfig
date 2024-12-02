@@ -1,11 +1,10 @@
 [user]
 name = Joe Lillibridge
+#email = joe@lillibridge.email
+#signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILoyiVVnKMnTDgtals13aXoBarPzwyRlKMhVugOj15ap
 
 [gpg]
 format = ssh
-
-[gpg "ssh"]
-program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [commit]
 gpgsign = true

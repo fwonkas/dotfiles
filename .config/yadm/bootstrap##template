@@ -17,6 +17,54 @@ brew bundle --global
 fi
 {% endif %}
 
+{% if yadm.os == "Linux" %}
+echo "installing git"
+sudo apt-get install -y git
+packages=()
+packages+=(
+	"bat"
+	"boxes"
+	"catimg"
+	"duf"
+	"editorconfig"
+	"fdfind"
+	"figlet"
+	"fzf"
+	"gh"
+	#"git-delta" # this is a special case that will be handled seperately
+	"gnupg"
+	"gron"
+	#"gum" # this is a special case that will be handled seperately
+	"highlight"
+	# "hr" # may not be available
+	"htop"
+	"jq"
+	"lolcat"
+	"lsd"
+	"neovim"
+	#"nodejs" Using alternate install method
+	#"nvm" # will use install script
+	#"ots" # not available for debian?
+	"peco"
+	#"pngpaste" # no deb package
+	"pwgen"
+	"shellcheck"
+	#"slackcat" # no deb package
+	#"slackdump" # no deb package
+	#"tag" # no deb package
+	"thefuck"
+	"tldr"
+	"tmux"
+	"vim"
+	#"watch" # standard in debian
+	"wget"
+	"yadm"
+	"zoxide"
+	"zsh-autosuggestions"
+	"zsh-syntax-highlighting"
+)
+{% endif %}
+
 # Directory to look for bootstrap executables in
 BOOTSTRAP_D="${BASH_SOURCE[0]}.d"
 
