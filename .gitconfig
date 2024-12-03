@@ -3,6 +3,12 @@ name = Joe Lillibridge
 #email = joe@lillibridge.email
 #signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILoyiVVnKMnTDgtals13aXoBarPzwyRlKMhVugOj15ap
 
+[push]
+autoSetupRemote = true
+
+[init]
+defaultBranch = main
+
 [gpg]
 format = ssh
 
@@ -62,5 +68,3 @@ remotecopy = "!git remotehttps | pbcopy"
 
 [include]
 path = .gitconfig.local
-[push]
-autoSetupRemote = true
