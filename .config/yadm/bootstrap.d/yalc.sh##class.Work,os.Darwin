@@ -1,0 +1,13 @@
+#!/bin/bash
+
+YARN=$(brew --prefix yarn)/bin/yarn
+
+if (command -v "$YARN" >/dev/null 2>&1); then
+	# Install yalc. Needed for local-publish
+	echo "Installing yalc..."
+	if ! $YARN global add yalc; then
+		echo "Failed to install yalc" >&2
+	else
+		echo "Successfully installed yalc"
+	fi
+fi

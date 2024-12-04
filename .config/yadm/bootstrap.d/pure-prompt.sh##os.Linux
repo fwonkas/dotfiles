@@ -1,0 +1,4 @@
+#!/bin/bash
+
+hash -r
+npm install --global pure-prompt
