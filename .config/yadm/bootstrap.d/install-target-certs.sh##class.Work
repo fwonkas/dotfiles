@@ -1,5 +1,4 @@
 #!/bin/sh
-{% if yadm.class == "Work" %}
 echo "Creating Target CA bundle directory..."
 mkdir -p "$HOME"/.config/target-certs
 
@@ -12,4 +11,3 @@ if ! curl -s -o "$HOME"/.config/target-certs/tgt-ca-bundle.crt \
 else
     echo "Downloaded and installed Target CA bundle."
 fi
-{% endif %}
