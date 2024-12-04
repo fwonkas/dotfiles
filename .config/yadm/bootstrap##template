@@ -2,6 +2,9 @@
 
 set -eu
 
+echo "Setting the yadm repo origin URL to SSH..."
+yadm remote set-url origin "git@github.com:fwonkas/dotfiles.git"
+
 {% if yadm.os == "Darwin" %}
 # install homebrew if it's missing
 if ! command -v brew >/dev/null 2>&1; then
