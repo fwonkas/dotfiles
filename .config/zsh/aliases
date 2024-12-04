@@ -44,7 +44,7 @@ alias bv="brew-visit" # a function defined elsewhere
 # These depend on some installed packages, so just to be safe
 alias ls="ls -F"
 [[ "$(command -v lsd)" ]] && alias ls="lsd -F"
-[[ "$(command -v bat)" ]] && alias cat="bat"
+# [[ "$(command -v bat)" ]] && alias cat="bat" # unneeded, handled by fdellwing/zsh-bat
 [[ "$(command -v htop)" ]] && alias top="htop"
 [[ "$(command -v duf)" ]] && alias df="duf"
 

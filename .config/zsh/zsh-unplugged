@@ -26,16 +26,14 @@ repos=(
 	# plugins you want loaded last
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-history-substring-search
-	zsh-users/zsh-autosuggestions
 	zsh-users/zsh-completions
-	# zsh-alias-finder and zsh-you-should-use do basically the same thing
-	# akash329d/zsh-alias-finder
 	MichaelAquilina/zsh-you-should-use
 	fdellwing/zsh-bat
 	zdharma-continuum/fast-syntax-highlighting
-	unixorn/tumult.plugin.zsh
-	supercrabtree/k
+	zsh-users/zsh-autosuggestions
 )
 
 # now load your plugins
 plugin-load "${repos[@]}"
+
+

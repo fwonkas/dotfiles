@@ -91,7 +91,10 @@ prompt pure
 if [ "$system_type" = "Darwin" ]; then
 	[ -f $HOME/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
 	[ -e $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
-	[ -f /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh ] && source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+	# is this macos-only?
+	# [ -f /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh ] && source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
 	if [ -d /Applications/ShellHistory.app/Contents/Helpers ]; then
 		# adding shhist to PATH, so we can use it from Terminal
 		export PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
@@ -121,4 +124,10 @@ fi
 
 eval "$(zoxide init --cmd j zsh)"
 [[ "$(command -v thefuck)" ]] && eval $(thefuck --alias)
+
+# This is probably for Linux
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [ "$system_type" = "Darwin" ]; then
+	. $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
