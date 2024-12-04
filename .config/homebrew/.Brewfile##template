@@ -55,7 +55,7 @@ brew "yadm"
 brew "yarn"
 brew "zoxide"
 brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
+# brew "zsh-syntax-highlighting"
 brew "mykolaharmash/git-jump/git-jump"
 
 # brew "difftastic"

@@ -1,0 +1,2 @@
+echo "Rendering templates and making symbolic links..."
+yadm alt
