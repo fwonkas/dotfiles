@@ -1,1 +1,0 @@
-iterm2.sh##os.Darwin

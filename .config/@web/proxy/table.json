@@ -1,0 +1,83 @@
+{
+  "global": {
+    "type": "global",
+    "backend": "localhost:3000"
+  },
+  "routes": [
+    {
+      "path": "/top-of-funnel/assets",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/p",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/product",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/c",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/sp",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/s",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/b",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/bp",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/pl",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/items",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/offer-details",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/occ",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/social",
+      "port": 3000,
+      "type": "local"
+    },
+    {
+      "path": "/gift-finder",
+      "port": 3000,
+      "type": "local"
+    }
+  ]
+}

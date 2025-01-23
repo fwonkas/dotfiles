@@ -24,8 +24,14 @@ export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=1
 export NODE_EXTRA_CA_CERTS=$HOME/.config/target-certs/tgt-ca-bundle.crt
 export VAULT_ADDR=https://prod.vault.target.com:443
 export NODE_OPTIONS="--max_old_space_size=12288"
-
 # I don't think this is needed; leaving it commented for now
 # export GH_HOST=git.target.com
+
+# 1Password secret references
+# See:
+#	- https://developer.1password.com/docs/cli/secret-reference-syntax/
+#	- https://developer.1password.com/docs/cli/secrets-environment-variables/
+export VPN_USERNAME="op://Target/Target Credentials/username"
+export VPN_PASSWORD="op://Target/Target Credentials/password"
 
 {% endif %}

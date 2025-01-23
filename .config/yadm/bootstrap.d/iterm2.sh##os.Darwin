@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # possibly add something here to ensure iTerm2 is installed using Homebrew
+# cask like in the previous example
 
 if [ -d "$HOME/.iterm2" ]; then
   echo "Setting iTerm preference folder"

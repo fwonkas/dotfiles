@@ -125,7 +125,7 @@ fi
 eval "$(zoxide init --cmd cd zsh)"
 [[ "$(command -v thefuck)" ]] && eval $(thefuck --alias)
 
-# This is for Linux. Why bash? I dunno. Whatever.
+# This is probably for Linux
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if [ "$system_type" = "Darwin" ]; then
