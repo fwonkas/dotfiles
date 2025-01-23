@@ -1,7 +1,5 @@
 [user]
 name = Joe Lillibridge
-#email = joe@lillibridge.email
-#signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILoyiVVnKMnTDgtals13aXoBarPzwyRlKMhVugOj15ap
 
 [push]
 autoSetupRemote = true
@@ -15,56 +13,6 @@ format = ssh
 [commit]
 gpgsign = true
 
-[alias]
-lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-st = status
-tst = status
-co = checkout
-tco = checkout
-ref = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
-amend = commit --amend
-untrack = rm --cached
-unadd = restore --staged
-softadd = add --intent-to-add
-wdiff = diff -w --word-diff=color --ignore-space-at-eol
-
-# Diff of last commit
-dlc = diff --cached HEAD^
-
-# list all defined aliases
-aliases = config --get-regexp alias
-
-# Find very first commit
-first = rev-list --max-parents=0 HEAD
-
-# what would be merged
-incoming = log HEAD..@{upstream}
-
-# what would be pushed
-outgoing = log @{upstream}..HEAD
-outgoing = log @{u}..
-
-# List all commits (on this branch) made by me
-mycommits = log --author=\".*[Jj]an\\s*[Kk]rag.*\"
-
-structure = log --oneline --simplify-by-decoration --graph --all
-
-# init new git repo with empty initial commit
-start = !git init && git commit --allow-empty -m \"Initial commit\"
-
-# create a git repo including everything in this dir
-initthis = !git init && git add . && git commit -m \"Bootstrap commit\"
-
-slog = log --pretty=format:'%C(auto)%h %C(red)%as %C(blue)%aN%C(auto)%d%C(green) %s'
-l = slog
-# Logs commits matching current author
-lome = "!git slog --author=$(git config --get user.name)"
-# Switch to master/main/trunk; whatever the default branch is in the repo
-swm = !git switch $(basename $(git symbolic-ref --short refs/remotes/origin/HEAD))
-
-remoteurl = "remote get-url origin"
-remotehttps = "!git remoteurl | sed  -e 's/git@/https:\\/\\//'"
-remotecopy = "!git remotehttps | pbcopy"
-
 [include]
+path = .gitconfig.aliases
 path = .gitconfig.local

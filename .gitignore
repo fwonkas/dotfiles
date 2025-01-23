@@ -36,6 +36,7 @@ __pycache__/
 .gk/repoMapping.json
 .gnupg
 .gnupg_*
+.iterm2
 .lesshst
 .local/bin
 .local/share
