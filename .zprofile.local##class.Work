@@ -1,8 +1,14 @@
 # Set up 1Password Agent for SSH
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
-if command -v op &> /dev/null && op account list &> /dev/null; then
-	export GITHUB_TOKEN="$(op read 'op://Target/Target Github Token/credential')"
+TOKEN_CACHE="$HOME/.cache/github_token"
+if [[ -f "$TOKEN_CACHE" && "$(find "$TOKEN_CACHE" -mmin -30)" ]]; then
+  export GITHUB_TOKEN="$(<"$TOKEN_CACHE")"
 else
-	echo "⚠️ 1Password not signed in. GITHUB_TOKEN not set."
+	if command -v op &> /dev/null && op account list &> /dev/null; then
+		export GITHUB_TOKEN="$(op read 'op://Target/Target Github Token/credential' --no-newline)"
+		echo "$GITHUB_TOKEN" > "$TOKEN_CACHE"
+	else
+		echo "⚠️ 1Password not signed in. GITHUB_TOKEN not set."
+	fi
 fi
