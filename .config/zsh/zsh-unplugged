@@ -20,8 +20,8 @@ source "$ZPLUGINDIR"/zsh_unplugged/zsh_unplugged.zsh
 repos=(
 	# plugins that you want loaded first
 	romkatv/zsh-defer
-
-	hyperupcall/autoenv
+	# hyperupcall/autoenv # this seems to conflict with zsh-nvm
+	lukechilds/zsh-nvm
 
 	# plugins you want loaded last
 	zsh-users/zsh-syntax-highlighting

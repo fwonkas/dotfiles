@@ -42,7 +42,7 @@ FILES_TO_SOURCE+=(
 	$ZSH_CONFIG_DIR/aliases
 	$ZSH_CONFIG_DIR/environment
 	$ZSH_CONFIG_DIR/zsh-unplugged # extremely minimal "package manager"
-	$HOME/.iterm2_shell_integration.zsh
+	# $HOME/.iterm2_shell_integration.zsh
 )
 
 if [ "$system_type" = "Darwin" ]; then
@@ -74,6 +74,7 @@ FUNCS_TO_AUTOLOAD+=(
 	unbuff
 	promptinit
 	compinit
+	yadmgo
 )
 
 if [ "$system_type" = "Darwin" ]; then
@@ -90,7 +91,7 @@ prompt pure
 
 if [ "$system_type" = "Darwin" ]; then
 	[ -f $HOME/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
-	[ -e $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
+	# [ -e $HOME/.iterm2_shell_integration.zsh ] && source $HOME/.iterm2_shell_integration.zsh
 
 	# is this macos-only?
 	# [ -f /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh ] && source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
@@ -114,15 +115,15 @@ if [ "$system_type" = "Darwin" ]; then
 	fi
 fi
 
-$HOME/.iterm2/it2check
-export TERMINAL_IS_ITERM2=$?
-if [ $TERMINAL_IS_ITERM2 -eq 0 ]; then
-	iterm2_print_user_vars() {
-		it2git
-	}
-fi
+# $HOME/.iterm2/it2check
+# export TERMINAL_IS_ITERM2=$?
+# if [ $TERMINAL_IS_ITERM2 -eq 0 ]; then
+# 	iterm2_print_user_vars() {
+# 		it2git
+# 	}
+# fi
 
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd j zsh)"
 [[ "$(command -v thefuck)" ]] && eval $(thefuck --alias)
 
 # This is probably for Linux

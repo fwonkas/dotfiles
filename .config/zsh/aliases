@@ -21,6 +21,9 @@ alias gap='ga -p'
 alias gc='g commit'
 alias gp='g push'
 
+alias push='g push'
+alias pull='g pull'
+
 # YADM aliases
 alias y="yadm"
 alias ys="y status"
